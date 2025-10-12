@@ -1,11 +1,15 @@
-# Introduction
-This script is to remote control the ET4510 LCR meter as well as a PID controller. 
+#note
+This script is to remote control the ET4510 LCR meter as well as a Omega CN740 temperature controller. 
 LCR part was revised from my labmate John Albert Faccinto's script @ https://github.com/TheDuckenEngineer
-PID part will be updated. 
+Temp controller part will be updated soon. 
 
-For MAC user, the argument for DeviceConenct is different. 
-Check the usb serial in System Information > USB
-
+For MAC user, the argument for DeviceConenct() is different from the original file. 
+Check the usb serial Mac > in System Information > USB
 [Example] ser_lcr = DeviceConnect('/dev//cu.usbserial-A94IP9Y2')  # LCR Meter
 
+LCR meter cable : USB-to-RS232(FTDI)
+PID controller cable : USB-to-RS485
+
 Ignore z# Jupyter Notebooks
+
+LCR meter part up and running as of Oct. 12th 2025

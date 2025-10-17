@@ -1,0 +1,44 @@
+#note
+This script is to remote control the ET4510 LCR meter as well as a Omega CN740 temperature controller. 
+LCR part was revised from John Albert Faccinto's script @ https://github.com/TheDuckenEngineer
+
+[Oct 13th 2025] Temp controller part will be updated soon. 
+- Omega CN740 is controlled via ASCII hexadecimal format.
+- New functions for CN740 has been added. 
+    DeviceConnect_CN740(), calc_lrc(), PIDDataReadout(), PIDcommander(), Experiment2(), DataExport2()
+- New script in Jupyter Notebook to measure temperature dependence measurement at a fixed frequency.
+
+For MAC user, the argument for DeviceConenct() is different from the original file. 
+Check the usb serial Mac > in System Information > USB
+[Example] ser_lcr = DeviceConnect('/dev//cu.usbserial-A94IP9Y2')  # LCR Meter
+
+LCR meter cable : USB-to-RS232(FTDI)
+PID controller cable : USB-to-RS485
+
+Ignore Jupyter Notebooks starting with z#
+
+LCR-plus-PID up and running as of Oct. 13th 2025
+
+
+-----
+* a1_ET4510 : LCR meter only.
+    - functions used: Experiment + DataExport
+    - LCR parameters over a range of frequency. 
+
+* a2_ET4510-plus-CN740 : LCR + PID. 
+    - functions used: Experiment2 + DataExport2
+    - This turns on the PID & heating element (SV) and measure the parameters over time @ fixed frequency. 
+    - Good for real time measuring with TC inside chamber.
+
+* a3_ET4510-plus-CN740 : LCR + PID.
+    - functions used: Experiment3 + DataExport
+    - This measures the LCR paramters at a equilibrated temperature, over a range of frequencies.
+    - 
+
+* Functions.py was divided into two: Functions_A.py and Functions_B.py.
+    - Funtions_A.py includes device connections and commands to communicate with devices
+    - Functions_B.py includes loops for experiments. (Experiments 1- 3)
+
+* All up & running as of Oct 16, 2025
+
+    

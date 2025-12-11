@@ -1,0 +1,22 @@
+In terminal, 
+.ls /dev/cu.usb*
+
+jongcheollee@Jongcheols-MacBook-Air-2
+/dev//cu.usbserial-A94IP9Y2     --> LCR meter
+/dev//cu.usbserial-BG00XWYD     --> CN740 PID 
+
+ser_lcr = DeviceConnect('/dev//cu.usbserial-A94IP9Y2')  # LCR Meter
+ser_cn740 = DeviceConnect_CN740('/dev/cu.usbserial-BG00XWYD')  # Omega CN740 (RS-485)
+
+--------------------------------------
+
+Ctrl + Enter --> Run Cell Execution
+Ctrl + C --> Stop Cell Execution
+Cmd + / --> #
+Cmd + [ or ] --> indent
+
+
+[[Some SCPI commands]]
+# placing ? at the end of any function will return its programed value
+# set the list for measurements :LIST: num, freq, low, high 
+# set the list that you want to measure :LIST:MODE [STEP, SEQ]

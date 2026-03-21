@@ -1,3 +1,5 @@
+The codes are not shared due to intellectual property considerations...(2026)
+
 # Thermal impedance measurement
 
 Newest version:

@@ -10,7 +10,7 @@ ET4510-LCR-PID_v4 (Dec 11th, 2025)
 - For details, check the readme file in the folder
 
 <div align="center">
-  <img width="600" src="https://github.com/JasonL1422/Images/blob/main/lcr%2Bpid2.png" />
+  <img width="400" src="https://github.com/JasonL1422/Images/blob/main/thermal%20impedance%20sys2.png" />
   <img width="1000" src="https://github.com/JasonL1422/Images/blob/main/thermal%20impedance.png" />
 </div>
 
